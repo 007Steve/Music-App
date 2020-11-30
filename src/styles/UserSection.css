@@ -1,0 +1,17 @@
+.userSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.userSection-name {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+.userSection-email {
+  font-size: 0.85rem;
+}
+.userSection-image {
+  font-size: 3rem;
+}

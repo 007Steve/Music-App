@@ -1,0 +1,32 @@
+.sidebar {
+  max-width: 25%;
+  height: 100vh;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-container {
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.sidebar-links-container {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+.sidebar-links-container:hover {
+  color: rgb(41, 136, 173);
+  cursor: pointer;
+  transition: ease-in 230ms;
+}
+.sidebar-links-h3 {
+  margin-left: 1rem;
+}
+
+h2 {
+  text-align: left;
+  font-size: 1rem;
+  margin: 1rem;
+}

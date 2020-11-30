@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-icon {
+  margin: 0.5rem;
+}
+.header-icon:hover {
+    color: rgb(197, 32, 32);
+    cursor: pointer;
+  }
+form {
+  display: flex;
+  width: 20rem;
+  justify-content: left;
+  align-items: left;
+  border: 1px solid lightgray;
+  border-radius: 10rem;
+  padding-right: 3rem;
+  margin-left: 1rem;
+}
+input {
+  flex: 1;
+  outline: none;
+  border: none;
+}

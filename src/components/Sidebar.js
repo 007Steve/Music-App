@@ -14,7 +14,7 @@ function Sidebar() {
       <div className="sidebar-container">
         <div className="sidebar-links-container">
           <HomeIcon className="sidebar-links-icon" />
-          <h3 className="sidebar-links-h3">Album</h3>
+          <h3 className="sidebar-links-h3">Home</h3>
         </div>
         <div className="sidebar-links-container">
           <DashboardIcon className="sidebar-links-icon" />
@@ -24,6 +24,10 @@ function Sidebar() {
         <div className="sidebar-links-container">
           <AlbumIcon className="sidebar-links-icon" />
           <h3 className="sidebar-links-h3">Ablum</h3>
+        </div>
+        <div className="sidebar-links-container">
+          <PersonIcon className="sidebar-links-icon" />
+          <h3 className="sidebar-links-h3">Artist</h3>
         </div>
         <div className="sidebar-links-container">
           <PersonIcon className="sidebar-links-icon" />

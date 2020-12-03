@@ -1,0 +1,53 @@
+.card {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+
+.card:hover {
+  cursor: pointer;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.card-image {
+  width: 50px;
+  border-radius: 2px;
+}
+
+.card-like:hover {
+  color: #ff0000;
+  transition: ease-in 280ms;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+.card-like {
+  margin-left: 0.5rem;
+}
+.card-album {
+  margin-left: 0.5rem;
+}
+
+.card-info-container {
+  display: flex;
+}
+
+.card-artist {
+  flex: 1;
+  margin-left: 0.5rem;
+}

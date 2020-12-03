@@ -3,12 +3,12 @@ import "../styles/Header.css";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import SettingsIcon from "@material-ui/icons/Settings";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from "@material-ui/icons/Search";
 function Header() {
   return (
     <div className="header">
       <form action="">
-          <SearchIcon/>
+        <SearchIcon />
         <input placeholder="Search" />
       </form>
 

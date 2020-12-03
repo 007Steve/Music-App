@@ -22,7 +22,7 @@ function UserSection() {
   const classes = useStyles();
   return (
     <div className="userSection">
-      <Avatar className={classes.large} />
+      <Avatar className={classes.large}  src="https://media-exp1.licdn.com/dms/image/C4D03AQHeZuu5PGQzYw/profile-displayphoto-shrink_200_200/0/1600449353015?e=1612396800&v=beta&t=HmJnVjehH2c3BhBmzwMjlxoi-LGkKxhVe3ozM2670pk"/>
       <h3 className="userSection-name">Stephen Plummer</h3>
       <p className="userSection-email">StephenPlummer@gmail.com</p>
     </div>

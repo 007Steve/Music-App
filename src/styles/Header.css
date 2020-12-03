@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(70, 66, 66, 0.582);
 }
 .header-icons {
   display: flex;
@@ -13,9 +17,10 @@
   margin: 0.5rem;
 }
 .header-icon:hover {
-    color: rgb(197, 32, 32);
-    cursor: pointer;
-  }
+  color: #4158d0;
+  transition: ease-in 280ms;
+  cursor: pointer;
+}
 form {
   display: flex;
   width: 20rem;
@@ -24,10 +29,15 @@ form {
   border: 1px solid lightgray;
   border-radius: 10rem;
   padding-right: 3rem;
+  padding: 0.2rem;
   margin-left: 1rem;
 }
 input {
   flex: 1;
   outline: none;
   border: none;
+  background-color: rgb(0, 0, 0);
+  color: gray;
+  padding-right: 1rem;
+  border-radius: 10rem;
 }

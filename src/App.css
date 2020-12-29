@@ -5,13 +5,16 @@
 .App {
   text-align: center;
   display: flex;
-  background-color: #000000;
+  justify-content: center;
+  background-image: linear-gradient(-20deg, #060708 0%, #252036 100%);
   height: 100vh;
+  
 }
 
 .container {
-  width: 84%;
+width: 84%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1;
 }

@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .userSection-name {
@@ -11,6 +12,9 @@
 }
 .userSection-email {
   font-size: 0.85rem;
+  color: lightgrey;
+  object-fit: contain;
+  margin-right: 1em;
 }
 .userSection-image {
   font-size: 3rem;

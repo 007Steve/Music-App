@@ -1,10 +1,11 @@
 .sidebar {
-  min-width: 16%;
-  background-color: #000000;
+  background-image: linear-gradient(-20deg, #060708 0%, #252036 100%);
+  backdrop-filter: blur(10px);
   color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   border-right: 1px solid rgba(70, 66, 66, 0.582);
+  padding-right: 1rem;
 }
 .sidebar-container {
   margin-left: 1rem;
@@ -16,9 +17,6 @@
   align-items: center;
   margin: 1rem;
   font-size: 0.8rem;
-  background: -webkit-linear-gradient(#4158d0, #ffcc70);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .sidebar-links-container:hover {
@@ -28,9 +26,6 @@
 }
 
 .sidebar-links-icon {
-  background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .sidebar-links-h3 {
   margin-left: 1rem;
@@ -40,4 +35,9 @@ h2 {
   text-align: left;
   font-size: 0.8rem;
   margin: 1rem;
+}
+@media only screen and (min-width: 1400px) {
+  .sidebar {
+    max-width: 7%;
+  }
 }

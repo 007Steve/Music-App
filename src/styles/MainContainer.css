@@ -1,0 +1,53 @@
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mainContainer-cards {
+  overflow-y: scroll;
+  position: relative;
+  height: 290px;
+  background-color: rgba(58, 58, 58, 0.13);
+  border-radius: 1em;
+  margin: 1rem;
+  flex: 1;
+}
+
+.mainContainer-cards::-webkit-scrollbar {
+  display: none;
+}
+.mainContainer-column {
+  background-color: rgba(58, 58, 58, 0.13);
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 290px;
+  flex: 1;
+  margin: 1rem;
+}
+.mainContainer-title {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  color: white;
+  text-align: left;
+}
+
+.mainContainer-music-list {
+}
+
+.two {
+  flex: 1;
+}
+@media only screen and (min-width: 1400px) {
+  .mainContainer-cards {
+    height: 60vh;
+  }
+  .mainContainer-column {
+    height: 60vh;
+  }
+}

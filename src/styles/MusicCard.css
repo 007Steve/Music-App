@@ -1,0 +1,25 @@
+.musicCard {
+  margin: 1rem;
+  color: white;
+  cursor: pointer;
+}
+.musicCard-image:hover {
+  box-shadow: 3px 3px 15px 5px rgba(100, 100, 100, 0.274);
+  transition: ease-in 340ms;
+}
+.musicCard-image {
+  height: 170px;
+  border-radius: 1rem;
+}
+.musicCard-info-container {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.musicCard-info-artist {
+  font-size: 0.8rem;
+  color: lightgrey;
+}
+.musicCard-info-album {
+  font-size: 1rem;
+}

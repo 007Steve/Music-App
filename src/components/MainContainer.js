@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import "../styles/MainContainer.css";
 import Card from "./Card";
 import Player from "./Player";
 import songss from "../SongsData";
-import { addSongs } from "../features/songsSlice";
+
 function MainContainer() {
   const [songs, setSongs] = useState(songss());
-  console.log(addSongs);
-
+  const [show, setShow] = useState();
+  // show player after 2 seconds
+  const num = setTimeout(() => {
+    setShow(true);
+  }, 500);
 
   return (
     <div className="mainContainer">
@@ -23,9 +26,8 @@ function MainContainer() {
           />
         ))}
       </div>
-
       <div className="mainContainer-column">
-        <Player />
+        {show ? <Player /> : "Loading"}
       </div>
     </div>
   );

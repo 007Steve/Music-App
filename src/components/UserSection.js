@@ -2,7 +2,13 @@ import React from "react";
 import "../styles/UserSection.css";
 import { Avatar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { selectUser } from "../features/userSlice";
+import { useSelector } from "react-redux";
 function UserSection() {
+// user state
+  const user = useSelector(selectUser);
+  console.log(user.name)
+//material ui style for larger avatar
   const useStyles = makeStyles((theme) => ({
     root: {
       display: "flex",
@@ -22,9 +28,9 @@ function UserSection() {
   const classes = useStyles();
   return (
     <div className="userSection">
-      <Avatar className={classes.large}  src="https://media-exp1.licdn.com/dms/image/C4D03AQHeZuu5PGQzYw/profile-displayphoto-shrink_200_200/0/1600449353015?e=1612396800&v=beta&t=HmJnVjehH2c3BhBmzwMjlxoi-LGkKxhVe3ozM2670pk"/>
-      <h3 className="userSection-name">Stephen Plummer</h3>
-      <p className="userSection-email">StephenPlummer@gmail.com</p>
+      <Avatar className={classes.large}  src=""/>
+      <h3 className="userSection-name">{user.name}</h3>
+      <p className="userSection-email">{user.email}</p>
     </div>
   );
 }

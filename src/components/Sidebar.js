@@ -5,7 +5,9 @@ import HomeIcon from "@material-ui/icons/Home";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import AlbumIcon from "@material-ui/icons/Album";
 import PersonIcon from "@material-ui/icons/Person";
+
 function Sidebar() {
+  
   return (
     <div className="sidebar">
       <div className="sidebar-container">

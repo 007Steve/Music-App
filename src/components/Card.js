@@ -3,9 +3,8 @@ import "../styles/Card.css";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { useDispatch } from "react-redux";
 import { setCurrentSong } from "../features/currentSongSlice";
-function Card({ album, artist, time, image, song, id }) {
+function Card({ time, song }) {
   const dispatch = useDispatch();
-  // const [currentSong, setCurrentSong] = useState([]);
   const songOne = song;
   useEffect(() => {
     selectedSongHandler();
@@ -17,7 +16,6 @@ function Card({ album, artist, time, image, song, id }) {
         setCurrentSong: song,
       })
     );
-  
   };
 
   return (

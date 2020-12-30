@@ -10,7 +10,7 @@ function MusicCard({ image, album, artist, song }) {
         setCurrentSong: song,
       })
     );
-    console.log(song);
+    console.log(artist);
   };
   return (
     <div className="musicCard" onClick={selectedSongHandler}>

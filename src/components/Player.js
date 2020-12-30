@@ -1,4 +1,4 @@
-import React, { useRef, useState,useEffect } from "react";
+import React, { useRef, useState } from "react";
 import "../styles/Player.css";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
@@ -6,28 +6,12 @@ import SkipNextIcon from "@material-ui/icons/SkipNext";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
 import { selectcurrentSong } from "../features/currentSongSlice";
 import { useSelector } from "react-redux";
-import { songs } from "../features/songsSlice";
-import MusicCard from "./MusicCard";
-function Player({ isPlaying, setIsPlaying }) {
+
+
+function Player() {
   const newCurrentSong = useSelector(selectcurrentSong);
-  const newSongs = useSelector(songs);
-  const music = newSongs.payload.songs.songs.songs
-  //figure out a way to set curreny song i redux without looping
-
-  
-
-
-const currentSong = newCurrentSong.setCurrentSong;
-console.log(currentSong)
-  useEffect(() => {
-   
-    
-   
-  }, []);
-
-
-
-
+  const currentSong = newCurrentSong.setCurrentSong;
+  const [isPlaying, setIsPlaying] = useState(currentSong);
 
   // Drag input slider
   const dragHandler = (e) => {
@@ -57,30 +41,29 @@ console.log(currentSong)
   const playSongHandler = () => {
     if (isPlaying) {
       audioRef.current.pause();
-      // setIsPlaying(!isPlaying);
+      setIsPlaying(!isPlaying);
     } else {
       audioRef.current.play();
-      // setIsPlaying(!isPlaying);
+      setIsPlaying(!isPlaying);
     }
   };
 
+  // NEED to Fix
   const skipSongBack = () => {
     // const num = newCurrentSong.setCurrentSong.id - 1
     // const song = music[`${num}`]
     // console.log(num)
-  }
+  };
   const skipSongForwoard = () => {
     // const id = newCurrentSong.setCurrentSong.id++
-  
     // const song = music[`${id}`]
     // console.logi(id)
-  }
- 
+  };
+
   return (
     <div className="player">
-
-      <img className="player-image"src={currentSong.cover} alt=""/>
-      <h4>{currentSong.song}</h4>
+      <img className="player-image" src={currentSong.cover} alt="" />
+      <h4>{currentSong.title}</h4>
       <div className="player-time-control">
         <p className="player-start-time">{getTime(songInfo.currentTime)}</p>
         <input
@@ -112,7 +95,7 @@ console.log(currentSong)
           autoPlay
           onTimeUpdate={timeUpdateHandler}
           ref={audioRef}
-               src={currentSong.audio}
+          src={currentSong.audio}
           onLoadedMetadata={timeUpdateHandler}
         ></audio>
       </div>

@@ -5,49 +5,31 @@ import Sidebar from "./components/Sidebar";
 import Row from "./components/Row.js";
 import MainContainer from "./components/MainContainer";
 import { selectUser } from "./features/userSlice";
-import { selectcurrentSong } from "./features/currentSongSlice";
+import { selectcurrentSong,setCurrentSong } from "./features/currentSongSlice";
 import { useSelector } from "react-redux";
-import { songs } from "./features/songsSlice";
+import { songs , selectSongs} from "./features/songsSlice";
 import { useDispatch } from "react-redux";
-import SongsData from "./SongsData";
 import Login from "./components/Login";
 
 function App() {
-
-  
-
-
-
-  // USER
+ // USER
   const user = useSelector(selectUser);
+  const currentSongS = useSelector(selectSongs);
+
 //DISPATCH
   const dispatch = useDispatch();
-
-  const [songz, setSongz] = useState(SongsData());
-  console.log(songz);
-
+ console.log(currentSongS)
   useEffect(() => {
-    songss();
-    // selectedSongHandler()
-  }, []);
-  // SONG
-  const songss = () => {
-    dispatch(
-      songs({
-        songs: songz,
-      })
-    );
-  };
+   fetch("http://localhost:3000/songs")
+   .then(response => response.json())
+   .then(data => dispatch(songs(data)))
+   dispatch(
+    setCurrentSong({
+      setCurrentSong:currentSongS[0],
+     } )
+  );
+  }, [])
 
-  // const selectedSongHandler = () => {
-  //   setCurrentSong(songOne);
-  //   dispatch(
-  //     setCurrentSong({
-  //       setCurrentSong: song,
-  //     })
-  //   );
-  
-  // };
   return (
     <>
 

@@ -3,28 +3,22 @@ import "../styles/Card.css";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { useDispatch } from "react-redux";
 import { setCurrentSong } from "../features/currentSongSlice";
-function Card({ time, song }) {
+function Card({ artist, cover, image, album, song }) {
   const dispatch = useDispatch();
-  const songOne = song;
-  useEffect(() => {
-    selectedSongHandler();
-  }, []);
   const selectedSongHandler = () => {
-    setCurrentSong(songOne);
     dispatch(
       setCurrentSong({
         setCurrentSong: song,
       })
     );
   };
-
   return (
     <div className="card" onClick={selectedSongHandler}>
-      <img className="card-image" src={song.cover} alt="" />
+      <img className="card-image" src={image} alt="" />
       <div className="card-container">
-        <h4 className="card-album">{song.song}</h4>
-        <p className="card-artist">{song.artist}</p>
-        <p className="card-time">{time}</p>
+        <h4 className="card-album">{album}</h4>
+        <p className="card-artist">{artist}</p>
+        <p className="card-time">{cover}</p>
         <FavoriteIcon className="card-like" />
       </div>
     </div>

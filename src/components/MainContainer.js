@@ -1,16 +1,11 @@
-import React, { useState} from "react";
+import React from "react";
 import "../styles/MainContainer.css";
 import Card from "./Card";
 import Player from "./Player";
-import songss from "../SongsData";
-
+import { selectSongs } from "../features/songsSlice";
+import { useSelector } from "react-redux";
 function MainContainer() {
-  const [songs, setSongs] = useState(songss());
-  const [show, setShow] = useState();
-  // show player after 2 seconds
-  const num = setTimeout(() => {
-    setShow(true);
-  }, 500);
+  const songs = useSelector(selectSongs);
 
   return (
     <div className="mainContainer">
@@ -20,14 +15,14 @@ function MainContainer() {
           <Card
             image={song.cover}
             artist={song.artist}
-            album={song.song}
-            song={song}
+            album={song.title}
             key={song.id}
+            song={song}
           />
         ))}
       </div>
       <div className="mainContainer-column">
-        {show ? <Player /> : "Loading"}
+        {songs ? <Player /> : "LOADING"}
       </div>
     </div>
   );

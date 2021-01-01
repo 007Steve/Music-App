@@ -22,7 +22,7 @@ function MainContainer() {
         ))}
       </div>
       <div className="mainContainer-column">
-        {songs ? <Player /> : "LOADING"}
+        <Player />
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ function Player() {
   const newCurrentSong = useSelector(selectcurrentSong);
   const currentSong = newCurrentSong.setCurrentSong;
   const [isPlaying, setIsPlaying] = useState(currentSong);
-
+ 
   // Drag input slider
   const dragHandler = (e) => {
     audioRef.current.currentTime = e.target.value;
@@ -59,7 +59,7 @@ function Player() {
     // const song = music[`${id}`]
     // console.logi(id)
   };
-
+ 
   return (
     <div className="player">
       <img className="player-image" src={currentSong.cover} alt="" />
@@ -95,7 +95,7 @@ function Player() {
           autoPlay
           onTimeUpdate={timeUpdateHandler}
           ref={audioRef}
-          src={currentSong.audio}
+           src={currentSong.audio}
           onLoadedMetadata={timeUpdateHandler}
         ></audio>
       </div>

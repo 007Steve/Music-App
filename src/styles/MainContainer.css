@@ -52,3 +52,10 @@
     height: 60vh;
   }
 }
+
+/* small screen remove recently played */
+@media only screen and (max-width:991px) {
+  .mainContainer-cards {
+    display: none;
+  }
+}

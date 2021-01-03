@@ -36,8 +36,16 @@ h2 {
   font-size: 0.8rem;
   margin: 1rem;
 }
-@media only screen and (min-width: 1400px) {
+/* lagre screens */
+@media only screen and (min-width: 1410px) {
   .sidebar {
-    max-width: 5%;
+    max-width: 9%;
+  }
+}
+
+/* small screen remove sidebar */
+@media only screen and (max-width: 991px) {
+  .sidebar {
+    display: none;
   }
 }

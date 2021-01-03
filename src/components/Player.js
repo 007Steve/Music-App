@@ -9,10 +9,17 @@ import { useSelector } from "react-redux";
 
 
 function Player() {
+  //const [count,setCount] = useState(1)
   const newCurrentSong = useSelector(selectcurrentSong);
   const currentSong = newCurrentSong.setCurrentSong;
   const [isPlaying, setIsPlaying] = useState(currentSong);
  
+ //console.log(count)
+
+// const countPlusOne = () => {
+// setCount(count -1)
+// }
+
   // Drag input slider
   const dragHandler = (e) => {
     audioRef.current.currentTime = e.target.value;

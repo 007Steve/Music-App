@@ -6,6 +6,7 @@
   flex-direction: column;
   border-right: 1px solid rgba(70, 66, 66, 0.582);
   width: 13%;
+  padding-right: 1rem;
 }
 .sidebar-container {
   margin-left: 1rem;

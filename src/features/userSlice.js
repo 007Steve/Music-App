@@ -1,24 +1,21 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export const userSlice = createSlice({
-  name: 'user',
+  name: "user",
   initialState: {
-   user: null,
-    
+    user: null,
   },
   reducers: {
-   
-   login: (state, action) => {
+    login: (state, action) => {
       state.user = action.payload;
     },
     logout: (state) => {
-        state.user = null;
-      },
-   
+      state.user = null;
+    },
   },
 });
 
-export const {login,logout} = userSlice.actions;
+export const { login, logout } = userSlice.actions;
 
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
@@ -33,6 +30,6 @@ export const {login,logout} = userSlice.actions;
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state) => state.user.value)`
-export const selectUser = state => state.user.user;
+export const selectUser = (state) => state.user.user;
 
 export default userSlice.reducer;

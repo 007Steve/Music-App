@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   background-image: linear-gradient(-20deg, #060708 0%, #252036 100%);
-  height: 100vh;
+ 
 }
 
 .container {
@@ -16,9 +16,10 @@ width: 84%;
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
+  height: 100vh;
 }
 /* lagre screens */
-@media only screen and (min-width: 1410px) {
+@media only screen and (min-width: 1460px) {
   .App {
    height: 100vh;
   }

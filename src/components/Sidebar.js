@@ -7,7 +7,6 @@ import AlbumIcon from "@material-ui/icons/Album";
 import PersonIcon from "@material-ui/icons/Person";
 
 function Sidebar() {
-  
   return (
     <div className="sidebar">
       <div className="sidebar-container">

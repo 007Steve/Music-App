@@ -5,10 +5,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import { selectUser } from "../features/userSlice";
 import { useSelector } from "react-redux";
 function UserSection() {
-// user state
+  // user state
   const user = useSelector(selectUser);
-  console.log(user.name)
-//material ui style for larger avatar
+  console.log(user.name);
+  //material ui style for larger avatar
   const useStyles = makeStyles((theme) => ({
     root: {
       display: "flex",
@@ -28,7 +28,7 @@ function UserSection() {
   const classes = useStyles();
   return (
     <div className="userSection">
-      <Avatar className={classes.large}  src=""/>
+      <Avatar className={classes.large} src="" />
       <h3 className="userSection-name">{user.name}</h3>
       <p className="userSection-email">{user.email}</p>
     </div>

@@ -4,21 +4,32 @@ import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
-import { selectcurrentSong } from "../features/currentSongSlice";
+import {
+  selectcurrentSong,
+  setCurrentSong,
+} from "../features/currentSongSlice";
+import { selectSongs } from "../features/songsSlice";
 import { useSelector } from "react-redux";
-
+import { current } from "@reduxjs/toolkit";
+import { useDispatch } from "react-redux";
 
 function Player() {
-  //const [count,setCount] = useState(1)
+  const dispatch = useDispatch();
+  const [count, setCount] = useState(1);
+  const songe = useSelector(selectSongs);
   const newCurrentSong = useSelector(selectcurrentSong);
   const currentSong = newCurrentSong.setCurrentSong;
   const [isPlaying, setIsPlaying] = useState(currentSong);
- 
- //console.log(count)
 
-// const countPlusOne = () => {
-// setCount(count -1)
-// }
+ 
+
+  const countPlusOne = () => {
+    setCount(count + 1);
+  };
+
+  const countMinusOne = () => {
+    setCount(count - 1);
+  };
 
   // Drag input slider
   const dragHandler = (e) => {
@@ -55,18 +66,31 @@ function Player() {
     }
   };
 
-  // NEED to Fix
+  // skip song backwards
   const skipSongBack = () => {
-    // const num = newCurrentSong.setCurrentSong.id - 1
-    // const song = music[`${num}`]
-    // console.log(num)
+    const num = newCurrentSong.setCurrentSong.id;
+    countMinusOne(num);
+    const song = songe[count];
+    dispatch(
+      setCurrentSong({
+        setCurrentSong: song,
+      })
+    );
+    console.log(song);
   };
+  // skip song forwards
   const skipSongForwoard = () => {
-    // const id = newCurrentSong.setCurrentSong.id++
-    // const song = music[`${id}`]
-    // console.logi(id)
+    const num = newCurrentSong.setCurrentSong.id;
+    countPlusOne(num);
+    const song = songe[count];
+    dispatch(
+      setCurrentSong({
+        setCurrentSong: song,
+      })
+    );
+    console.log(song);
   };
- 
+
   return (
     <div className="player">
       <img className="player-image" src={currentSong.cover} alt="" />
@@ -102,7 +126,7 @@ function Player() {
           autoPlay
           onTimeUpdate={timeUpdateHandler}
           ref={audioRef}
-           src={currentSong.audio}
+          src={currentSong.audio}
           onLoadedMetadata={timeUpdateHandler}
         ></audio>
       </div>

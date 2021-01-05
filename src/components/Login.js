@@ -22,6 +22,7 @@ function Login() {
   return (
     <div className="login">
       <iframe
+      title="3d"
         id="b5f265b1-cfc1-4e17-bd8d-53bbaf3c9736"
         src="https://www.vectary.com/viewer/v1/?model=b5f265b1-cfc1-4e17-bd8d-53bbaf3c9736&env=studio3"
         frameborder="0"
@@ -60,11 +61,11 @@ function Login() {
       </form>
       <button
         className="login-btn"
-        disabled={!name}
+        // disabled={!name}
         type="submit"
         onClick={setUserHandler}
       >
-        Sign in
+       Demo
       </button>
       <br />
     </div>
